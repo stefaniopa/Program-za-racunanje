@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Program</title>
+</head>
+<body>
+    <script>
+        var prvibroj = parseInt(prompt("Unesite prvi broj:"));
+        var ope = prompt("Unesite operator");
+        var drugibroj = parseInt(prompt("Unesite drugi broj:"));
+        var rez;
+        var proveraBrojeva = prvibroj%1 == 0 && drugibroj%1 == 0? true: false;
+        var proveraOperatora = ope == "+"|| ope =="-" || ope == "*" || ope == "/" ? true: false;
+        if(proveraBrojeva && proveraOperatora) {
+            if(ope == "+"){
+                rez = prvibroj + drugibroj;
+            }
+            if (ope == "-"){
+                rez = prvibroj - drugibroj;
+            }
+            if(ope == "*"){
+                rez = prvibroj * drugibroj;
+            }
+            if(ope == "/"){
+                rez = prvibroj / drugibroj;
+            }
+            alert(rez); 
+        }
+        else {
+            alert("Niste dobro uneli brojeve ili operator");
+        }
+    </script>
+</body>
+</html>
